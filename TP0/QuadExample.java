@@ -5,7 +5,6 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
 import java.io.File;
-
 import java.io.File;
 import java.io.*;
 
@@ -46,6 +45,7 @@ public class QuadExample {
         GL11.glLoadIdentity();
         GL11.glOrtho(0, 800, 0, 600, 1, -1);
         GL11.glMatrixMode(GL11.GL_MODELVIEW);
+        
   
         while (!Display.isCloseRequested()) {
             // Clear the screen and depth buffer
@@ -53,13 +53,28 @@ public class QuadExample {
          
             // set the color of the quad (R,G,B,A)
             GL11.glColor3f(0.5f,0.5f,1.0f);
-             
+            
             // draw quad
             GL11.glBegin(GL11.GL_QUADS);
-            GL11.glVertex2f(100,100);
-            GL11.glVertex2f(100+200,100);
+            GL11.gl(100,100);
+            GL11.gl_QUADS(100+200,100);
             GL11.glVertex2f(100+200,100+200);
             GL11.glVertex2f(100,100+200);
+            GL11.glColor3f(0,0,1.0f);
+            GL11.glVertex2f(300,300);
+            GL11.glVertex2f(300+200,300);
+            GL11.glVertex2f(300+200,200+200);
+            GL11.glVertex2f(300,100+300);
+                GL11.glColor3f(0,1,1.0f);
+            GL11.glVertex2f(600,700);
+            GL11.glVertex2f(300+200,300);
+            GL11.glVertex2f(600+200,300+200);
+            GL11.glVertex2f(900,100+900);
+         
+           int a = 1, b = 16;
+
+
+            
             GL11.glEnd();
   
             Display.update();
