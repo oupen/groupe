@@ -101,7 +101,7 @@ public class QuadExample {
             e.printStackTrace();
         }
 
-        // il est possible de passer l'argument "fullscreen" lors de l'invocation de la fonction 
+        // il est posible de passer l'argument "fullscreen" lors de l'invocation de la fonction 
         //<b>main()</b> pour que la fenètre soit affichée en mode plein écran
         boolean fullscreen = false;
         if(argv.length>0) {
